@@ -11,7 +11,7 @@ export default function Home() {
     { href: '/api/auth/login', label: '로그인', icon: '🔑' },
     { href: '/api/auth/logout', label: '로그아웃', icon: '👋' },
     { href: '/api/auth/callback', label: '콜백', icon: '🔄' },
-    { href: '/api/auth/me', label: '내 정보', icon: '👤' },
+    { href: '/profile-server', label: '내 정보', icon: '👤' },
   ];
 
   return (
