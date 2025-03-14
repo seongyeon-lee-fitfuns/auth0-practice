@@ -2,6 +2,7 @@
 
 import { useUser } from '@auth0/nextjs-auth0/client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProfilePage() {
   const { user, error, isLoading } = useUser();
@@ -57,10 +58,12 @@ export default function ProfilePage() {
               {/* Profile Image */}
               <div className="w-32 h-32 relative">
                 {user.picture ? (
-                  <img 
-                    src={user.picture} 
-                    alt={user.name || '프로필 이미지'} 
-                    className="w-full h-full object-cover rounded-full border"
+                  <Image 
+                    src={user.picture}
+                    alt={user.name || '프로필 이미지'}
+                    width={128}
+                    height={128}
+                    className="object-cover rounded-full border"
                   />
                 ) : (
                   <div className="w-full h-full rounded-full border bg-gray-100 flex items-center justify-center">
